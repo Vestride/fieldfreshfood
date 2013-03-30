@@ -1,5 +1,6 @@
 
 (function($, Modernizr, window, undefined) {
+  'use strict';
 
   var Revealer = function( element, options ) {
     this.element = this;
@@ -54,9 +55,9 @@
       if ( !self.isTicking ) {
         self.isTicking = true;
         self.lastY = self.$window.scrollTop();
-        requestAnimationFrame(function() {
+        // requestAnimationFrame(function() {
           self._updateRevealer();
-        });
+        // });
       }
     },
 
@@ -65,6 +66,7 @@
           y = self.lastY * self.speed,
           yValue = self._getY( y );
 
+          console.log(y);
       self.$el.css( self.prop, yValue );
 
       self.isTicking = false;
@@ -82,6 +84,73 @@
 }(jQuery, Modernizr, window));
 
 
+(function($, Modernizr, window, undefined) {
+  'use strict';
+
+  var FocusForm = function( element, options ) {
+    this.element = this;
+    this.$el = $( element );
+    this.$window = $(window);
+    this._init( options );
+    this.$el.data('revealer', this);
+  };
+
+  FocusForm.prototype = {
+    constructor: FocusForm,
+
+    _init : function() {
+      var self = this;
+
+      self.$el.find('input').on('focus', $.proxy( self._onFocus, self ));
+      self.$el.find('input').on('blur', $.proxy( self._onBlur, self ));
+    },
+
+    _onFocus : function() {
+      this.$el.addClass('focused');
+    },
+
+    _onBlur : function() {
+      this.$el.removeClass('focused');
+    }
+  };
+
+  window.FocusForm = FocusForm;
+
+}(jQuery, Modernizr, window));
+
+(function($, Modernizr, window, undefined) {
+  'use strict';
+
+  var HeroCarousel = function( element, options ) {
+    this.element = this;
+    this.$el = $( element );
+    this.$window = $(window);
+    this._init( options );
+    this.$el.data('revealer', this);
+  };
+
+  HeroCarousel.prototype = {
+    constructor: HeroCarousel,
+
+    _init : function() {
+      var self = this;
+
+      self.$el.carousel({
+        prevButtonClass: 'carousel-btn-prev round-btn',
+        nextButtonClass: 'carousel-btn-next round-btn',
+        nextText: '',
+        prevText: ''
+      });
+    }
+  };
+
+  window.HeroCarousel = HeroCarousel;
+
+}(jQuery, Modernizr, window));
+
+
 $(document).ready(function() {
   new Revealer( document.querySelector('.js-revealer') );
+  new FocusForm( document.querySelector('.page-header form') );
+  new HeroCarousel( document.querySelector('.carousel-container') );
 });
