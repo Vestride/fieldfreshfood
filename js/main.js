@@ -1,4 +1,5 @@
 
+// Revealer
 (function($, Modernizr, window, undefined) {
   'use strict';
 
@@ -83,7 +84,7 @@
 
 }(jQuery, Modernizr, window));
 
-
+// Focus Form
 (function($, Modernizr, window, undefined) {
   'use strict';
 
@@ -92,7 +93,7 @@
     this.$el = $( element );
     this.$window = $(window);
     this._init( options );
-    this.$el.data('revealer', this);
+    this.$el.data('focusForm', this);
   };
 
   FocusForm.prototype = {
@@ -118,6 +119,7 @@
 
 }(jQuery, Modernizr, window));
 
+// Hero carousel
 (function($, Modernizr, window, undefined) {
   'use strict';
 
@@ -126,7 +128,7 @@
     this.$el = $( element );
     this.$window = $(window);
     this._init( options );
-    this.$el.data('revealer', this);
+    this.$el.data('heroCarousel', this);
   };
 
   HeroCarousel.prototype = {
@@ -148,9 +150,51 @@
 
 }(jQuery, Modernizr, window));
 
+// Snacks Gallery
+(function($, Modernizr, window, undefined) {
+  'use strict';
+
+  var SnackGallery = function( element, options ) {
+    this.element = this;
+    this.$el = $( element );
+    this.$window = $(window);
+    this._init( options );
+    this.$el.data('gallery', this);
+  };
+
+  SnackGallery.prototype = {
+    constructor: SnackGallery,
+
+    _init : function() {
+      var self = this;
+
+      self.$sizer = self.$el.find('.sizer');
+
+      // Returning the rounded width values for column and gutter results in uneven
+      // calculations because the precision is missing. If only we could get the % from the css...
+      self.$el.shuffle({
+        speed: 250,
+        itemSelector: '.snack',
+        throttle: $.throttle,
+        columnWidth: function( containerWidth ) {
+          return parseFloat( self.$sizer.css( 'width' ) ) ;
+        },
+        gutterWidth: function( containerWidth ) {
+          return parseFloat( self.$sizer.css( 'marginLeft' ) ) ;
+        }
+
+      });
+    }
+  };
+
+  window.SnackGallery = SnackGallery;
+
+}(jQuery, Modernizr, window));
+
 
 $(document).ready(function() {
   new Revealer( document.querySelector('.js-revealer') );
   new FocusForm( document.querySelector('.page-header form') );
   new HeroCarousel( document.querySelector('.carousel-container') );
+  new SnackGallery( document.querySelector('.snacks-grid') );
 });

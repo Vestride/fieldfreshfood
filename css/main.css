@@ -30,7 +30,8 @@ textarea {
 }
 
 body {
-  font-family: Helvetica, Arial;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
   font-size: 1em;
   line-height: 1.4;
 }
@@ -99,350 +100,6 @@ textarea {
 
 
 
-/* ==========================================================================
-   Custom styles
-   ========================================================================== */
-
-body {
-  position: relative;
-  padding-top: 3em;
-}
-
-.page-header .hat {
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  height: 3.5em;
-  width: 100%;
-}
-
-.page-header .hat-background {
-  position: absolute;
-  height: 2.5em;
-  width: 100%;
-  background-image: url(../img/purty-wood.jpg);
-  background-repeat: repeat;
-}
-
-.page-header .hat-border {
-  position: absolute;
-  top: 2.5em;
-  height: 1.0625em;
-  width: 100%;
-  background-image: url(../img/border-ridges.png);
-  background-repeat: repeat-x;
-}
-
-.page-header .small-logo {
-  display: block;
-  width: 42px;
-  height: 44px;
-  margin-top: .25em;
-  background: url(../img/fieldfresh-logo.png) no-repeat;
-}
-
-.page-header form {
-  overflow: hidden;
-  width: 80%;
-  margin-top: 6px;
-  background-color: transparent;
-  background-color: rgba(0, 0, 0, .12);
-  border-radius: 30px;
-  transition: .2s ease-out;
-}
-
-.page-header form.focused {
-  width: 100%;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, .3), 0 1px 3px rgba(255, 255, 255, .5);
-}
-
-.page-header form .submit {
-  float: left;
-  margin-top: 1px;
-  margin-left: 1px;
-}
-
-
-.page-header form .clear-input {
-  float: right;
-  width: 70px;
-  width: -webkit-calc(100% - 32px);
-  width: calc(100% - 32px);
-  height: 32px;
-  border: 0;
-  padding: 0 0 0 10px;
-  font-size: .875em;
-  color: white;
-  background-color: transparent;
-}
-
-.page-header form .clear-input:focus {
-  outline: 0;
-}
-
-
-.clear-input::-webkit-input-placeholder {
-   color: white;
-   text-overflow: ellipsis !important;
-   overflow: hidden;
-}
-
-.clear-input::-moz-placeholder {
-   color: white;
-   text-overflow: ellipsis !important;
-   overflow: hidden;
-}
-
-.clear-input:-ms-input-placeholder {
-   color: white;
-   text-overflow: ellipsis !important;
-   overflow: hidden;
-}
-
-.page-header .container {
-  position: relative;
-}
-
-
-
-/* Jumbotron ( green area ) */
-
-.page-header .jumbotron {
-  position: relative;
-  height: 15.9375em;
-  background-color: #aede85;
-  background-image: url(../img/fruit-veggies.svg);
-  background-position: center bottom;
-  background-repeat: no-repeat;
-}
-
-.logo-wrap {
-  text-align: center;
-  padding-top: 1em;
-}
-
-#main {
-  position: relative;
-  z-index: 10;
-  min-height: 2000px;
-  background: white;
-}
-
-.main-nav {
-  margin-top: 1.875em;
-  font-family: 'arvil';
-  text-align: center;
-}
-
-.main-nav a {
-  display: inline-block;
-  margin-right: 30px;
-  color: white;
-  text-decoration: none;
-  font-size: 2.25em;
-  line-height: 1;
-  transition: .2s ease-out;
-}
-
-.main-nav a:last-child {
-  margin-right: 0;
-}
-
-.main-nav a:visited {
-  color: white;
-}
-.main-nav a:hover {
-  text-decoration: underline;
-}
-
-.main-nav a:active,
-.main-nav a.active {
-  color: #b22222;
-}
-
-.round-btn {
-  display: inline-block;
-  height: 45px;
-  width: 45px;
-  border: 0;
-  padding: 0;
-  border-radius: 50%;
-  background-color: #b7f262;
-  box-shadow: inset 1px 1px 3px 0 rgba(255, 255, 255, .5),
-              inset -1px -1px 5px -1px rgba(0, 0, 0, .3),
-              1px 1px 3px rgba(0, 0, 0, .15);
-  transition: .15s ease-out;
-}
-
-.round-btn.btn-small {
-  height: 30px;
-  width: 30px;
-}
-
-
-.round-btn:focus,
-.round-btn:hover {
-  background-color: #b22222;
-  outline: 0;
-}
-.round-btn:active {
-  background-color: #911414;
-}
-
-
-.carousel-wrap {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  margin-top: 1.25em;
-  overflow: hidden;
-}
-
-.carousel-container {
-  position: relative;
-}
-
-.carousel-wrap .slide {
-  position: relative;
-  width: inherit;
-  height: 300px;
-  background: gray;
-}
-
-.carousel-btns {
-  position: absolute;
-  z-index: 20;
-  top: 50%;
-  margin-top: -22.5px;
-}
-
-.carousel-index-btn {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin-right: 18px;
-  border-radius: 50%;
-  background: #abda82;
-}
-
-.carousel-index-btn:last-child {
-  margin-right: 0;
-}
-
-.carousel-index-btn.active {
-  background: #b22222;
-}
-
-
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-.relative {
-  position: relative;
-}
-
-.text-center {
-  text-align: center;
-}
-
-/*
- * Image replacement
- */
-
-.ir {
-  background-color: transparent;
-  border: 0;
-  overflow: hidden;
-}
-
-.ir:before {
-  content: "";
-  display: block;
-  width: 0;
-  height: 150%;
-}
-
-/*
- * Hide from both screenreaders and browsers: h5bp.com/u
- */
-
-.hidden {
-  display: none !important;
-  visibility: hidden;
-}
-
-/*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
-
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
-}
-
-/*
- * Hide visually and from screenreaders, but maintain layout
- */
-
-.invisible {
-  visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-
-
-.pull-left { float: left; }
-.pull-right { float: right; }
 
 .row {
   width: 100%;
@@ -461,7 +118,6 @@ body {
   width: 100%;
   min-height: 30px;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   float: left;
   margin-left: 2.127659574468085%;
@@ -598,14 +254,9 @@ body {
 .container:after {
   clear: both;
 }
-
 @media (max-width: 47.9375em) {
-  body {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
   .container {
-    padding: 0;
+    padding: 0 20px;
   }
   .row {
     width: 100%;
@@ -908,6 +559,447 @@ body {
     margin-left: 8.547008547008547%;
   }
 }
+
+
+
+/* ==========================================================================
+   Custom styles
+   ========================================================================== */
+
+body {
+  position: relative;
+  padding-top: 3em;
+}
+
+.page-header .hat {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  height: 3.5em;
+  width: 100%;
+}
+
+.page-header .hat-background {
+  position: absolute;
+  height: 2.5em;
+  width: 100%;
+  background-image: url(../img/purty-wood.jpg);
+  background-repeat: repeat;
+}
+
+.page-header .hat-border {
+  position: absolute;
+  top: 2.5em;
+  height: 1.0625em;
+  width: 100%;
+  background-image: url(../img/border-ridges.png);
+  background-repeat: repeat-x;
+}
+
+.page-header .small-logo {
+  display: block;
+  width: 42px;
+  height: 44px;
+  margin-top: .25em;
+  background: url(../img/fieldfresh-logo.png) no-repeat;
+}
+
+.page-header form {
+  overflow: hidden;
+  width: 80%;
+  margin-top: 6px;
+  background-color: transparent;
+  background-color: rgba(0, 0, 0, .12);
+  border-radius: 30px;
+  transition: .2s ease-out;
+}
+
+.page-header form.focused {
+  width: 100%;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, .3), 0 1px 3px rgba(255, 255, 255, .5);
+}
+
+.page-header form .submit {
+  float: left;
+  margin-top: 1px;
+  margin-left: 1px;
+}
+
+
+.page-header form .clear-input {
+  float: right;
+  width: 70px;
+  width: -webkit-calc(100% - 32px);
+  width: calc(100% - 32px);
+  height: 32px;
+  border: 0;
+  padding: 0 0 0 10px;
+  font-size: .875em;
+  color: white;
+  background-color: transparent;
+}
+
+.page-header form .clear-input:focus {
+  outline: 0;
+}
+
+
+.clear-input::-webkit-input-placeholder {
+   color: white;
+   text-overflow: ellipsis !important;
+   overflow: hidden;
+}
+
+.clear-input::-moz-placeholder {
+   color: white;
+   text-overflow: ellipsis !important;
+   overflow: hidden;
+}
+
+.clear-input:-ms-input-placeholder {
+   color: white;
+   text-overflow: ellipsis !important;
+   overflow: hidden;
+}
+
+.page-header .container {
+  position: relative;
+}
+
+
+
+/* Jumbotron ( green area ) */
+
+.page-header .jumbotron {
+  position: relative;
+  height: 15.9375em;
+  background-color: #aede85;
+  background-image: url(../img/fruit-veggies.svg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.logo-wrap {
+  text-align: center;
+  padding-top: 1em;
+}
+
+#main {
+  position: relative;
+  z-index: 10;
+  min-height: 2000px;
+  background: white;
+}
+
+.main-nav {
+  margin-top: 1.875em;
+  font-family: 'arvil';
+  text-align: center;
+}
+
+.main-nav a {
+  display: inline-block;
+  margin-right: 30px;
+  color: white;
+  text-decoration: none;
+  font-size: 2.25em;
+  line-height: 1;
+  transition: .2s ease-out;
+}
+
+.main-nav a:last-child {
+  margin-right: 0;
+}
+
+.main-nav a:visited {
+  color: white;
+}
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+.main-nav a:active,
+.main-nav a.active {
+  color: #b22222;
+}
+
+.round-btn {
+  display: inline-block;
+  height: 45px;
+  width: 45px;
+  border: 0;
+  padding: 0;
+  border-radius: 50%;
+  background-color: #b7f262;
+  box-shadow: inset 1px 1px 3px 0 rgba(255, 255, 255, .5),
+              inset -1px -1px 5px -1px rgba(0, 0, 0, .3),
+              1px 1px 3px rgba(0, 0, 0, .15);
+  transition: .15s ease-out;
+}
+
+.round-btn.btn-small {
+  height: 30px;
+  width: 30px;
+}
+
+
+.round-btn:focus,
+.round-btn:hover {
+  background-color: #b22222;
+  outline: 0;
+}
+.round-btn:active {
+  background-color: #911414;
+}
+
+
+.carousel-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 1.25em;
+  overflow: hidden;
+}
+
+.carousel-container {
+  position: relative;
+}
+
+.carousel-wrap .slide {
+  position: relative;
+  width: inherit;
+  height: 300px;
+  background: gray;
+}
+
+.carousel-btns {
+  position: absolute;
+  z-index: 20;
+  top: 50%;
+  margin-top: -22.5px;
+}
+
+.carousel-index-btn {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 18px;
+  border-radius: 50%;
+  background: #abda82;
+}
+
+.carousel-index-btn:last-child {
+  margin-right: 0;
+}
+
+.carousel-index-btn.active {
+  background: #b22222;
+}
+
+
+/** Filters **/
+
+.filter-title {
+
+}
+
+
+/** Snacks **/
+.snacks-grid {
+  position: relative;
+}
+
+.snacks-grid .snack {
+  position: relative;
+  margin-top: 2.5em;
+  margin-left: 0;
+  overflow: hidden;
+}
+
+.snacks-grid img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.snacks-grid .caption-wrap {
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  width: 100%;
+  transition: .2s ease-out;
+}
+
+.snacks-grid figcaption {
+  width: 100%;
+  font-size: .75em;
+  text-align: center;
+  background-color: white;
+  background-color: rgba(255, 255, 255, .7);
+}
+
+.snacks-grid .download-link {
+  position: relative;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 9px;
+  width: 100%;
+  font-size: .875em;
+  text-indent: 40px;
+  text-decoration: none;
+}
+
+.snacks-grid .download-link strong {
+  font-size: .928571429em;
+}
+
+/* Triangle part of the arrow */
+.snacks-grid .download-link:before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  left: 8px;
+  height: 0;
+  width: 0;
+  border-top: 11px solid #55B255;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+}
+
+/* rectangle part of the arrow */
+.snacks-grid .download-link:after {
+  content: '';
+  position: absolute;
+  top: 11px;
+  left: 14px;
+  width: 10px;
+  height: 7px;
+  background-color: #55B255;
+}
+
+.snacks-grid .fruit .download-link:before {
+  border-top-color: #FFD4AE;
+}
+
+.snacks-grid .fruit .download-link:after {
+  background-color: #FFD4AE;
+}
+
+.snacks-grid .mixed .download-link:before {
+  border-top-color: #082E99;
+}
+
+.snacks-grid .mixed .download-link:after {
+  background-color: #082E99;
+}
+
+.snacks-grid .fruit .download-link {
+  color: #FFD4AE;
+  background-color: #ff7930;
+}
+
+.snacks-grid .vegetable .download-link {
+  color: #55B255;
+  background-color: #aede85;
+}
+
+.snacks-grid .mixed .download-link {
+  color: #082E99;
+  background-color: #1a7bff;
+}
+
+.snacks-grid .snack:focus .caption-wrap,
+.snacks-grid .snack:hover .caption-wrap {
+  bottom: 0;
+}
+
+.snacks-grid .sizer {
+  position: absolute;
+  opacity: 0;
+}
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.relative {
+  position: relative;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+}
+
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+.pull-left { float: left; }
+.pull-right { float: right; }
+
+@media (max-width: 47.9375em) {}
+@media (max-width: 30em) {
+
+}
+/* 768-979 */
+@media (min-width: 48em) and (max-width: 61.1875em) {}
+@media (min-width: 75em) {}
 
 @media (-webkit-min-device-pixel-ratio: 1.3), (min-resolution: 124dpi) {
   .page-header .hat-background {
